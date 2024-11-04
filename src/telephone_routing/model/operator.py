@@ -8,6 +8,9 @@ class Operator:
         pass
 
     def sort_price_list(self) -> None:
+        """
+        Sort the price list dictionary by keys (prefixes) in ascending order.
+        """
         self.price_list = dict(
             sorted(self.price_list.items(), key=lambda x: x[0]))
         pass

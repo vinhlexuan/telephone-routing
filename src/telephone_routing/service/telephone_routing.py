@@ -10,6 +10,10 @@ class TelephoneRouting:
         self._load_operators_to_trie()
 
     def _load_operators_to_trie(self) -> None:
+        """
+        Load all operators and their price lists into the Trie data structure
+        All operators must sort their {prefix: price} dict first.
+        """
         operators = self.operator_repo.get_all_operators()
         for operator in operators:
             operator.sort_price_list()
