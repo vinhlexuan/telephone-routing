@@ -105,6 +105,8 @@ Example:
 - m: number of all operators
 - l: average number of prefixs in all operators
 
+---
+
 ### Search time improvement approach
 
 Step of this approach:
@@ -115,7 +117,7 @@ Step of this approach:
 
 #### Data structure
 
-Build 1 Trie (prefix tree) to store all `{prefix: price}` elements of all operators. Each node store the a dict with format `{operator: price}`. If a dict value of the node is updated, update this value to all children of this node.
+Build a Trie (prefix tree) to store all `{prefix: price}` elements of all operators. Each node store the a dict with format `{operator: price}`. If a dict value of the node is updated, update this value to **all children of this node**.
 
 ![trie.png](trie.png "Trie data structure after builded")
 
