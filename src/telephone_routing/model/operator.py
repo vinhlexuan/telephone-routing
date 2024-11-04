@@ -8,7 +8,8 @@ class Operator:
         pass
 
     def sort_price_list(self) -> None:
-        self.price_list = dict(sorted(self.price_list.items(), key=lambda x: x[0]))
+        self.price_list = dict(
+            sorted(self.price_list.items(), key=lambda x: x[0]))
         pass
 
     def __str__(self) -> str:

@@ -6,9 +6,7 @@ from repository.operator_repo import OperatorRepo
 
 
 class OperatorRepoFile(OperatorRepo):
-
     def get_all_operators(self) -> list[Operator]:
-
         list_operators = []
         csv_files = os.listdir("data")
         for file in csv_files:

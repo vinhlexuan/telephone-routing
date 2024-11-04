@@ -3,6 +3,7 @@ class TrieNode:
         self.children: dict[str, TrieNode] = {}
         self.operator_price: dict[str, float] = {}
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
