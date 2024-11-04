@@ -10,6 +10,7 @@ Telephone Routing is a Python project that helps find the cheapest operator for 
 
 ## Project Structure
 
+```
 telephone-routing/
 ├── src/
 │   └── telephone_routing/
@@ -19,6 +20,7 @@ telephone-routing/
 ├── tests/
 ├── README.md
 └── requirements.txt
+```
 
 ## Installation
 
