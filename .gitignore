@@ -1,0 +1,15 @@
+.vscode
+
+.venv
+
+__pycache__
+
+.pdm-python
+
+pdm.lock
+
+.pytest_cache
+
+.coverage
+
+htmlcov
