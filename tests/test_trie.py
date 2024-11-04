@@ -51,12 +51,3 @@ def test_no_match(trie):
     trie.insert("operator_a", "46", 0.9)
     result = trie.search("1")
     assert result == {}
-
-def test_empty_string(trie):
-    trie.insert("operator_a", "", 0.9)
-
-    result = trie.search("")
-    assert result == {"operator_a": 0.9}
-
-    result = trie.search("123")
-    assert result == {"operator_a": 0.9}

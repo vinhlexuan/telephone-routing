@@ -7,10 +7,12 @@ class TelephoneRouting:
     def __init__(self, operator_repo: OperatorRepo) -> None:
         self.trie: Trie = Trie()
         self.operator_repo: OperatorRepo = operator_repo
+        self._load_operators_to_trie()
 
-    def load_operators_to_trie(self) -> None:
+    def _load_operators_to_trie(self) -> None:
         operators = self.operator_repo.get_all_operators()
         for operator in operators:
+            operator.sort_price_list()
             for prefix, price in operator.price_list.items():
                 self.trie.insert(operator.name, prefix, price)
 

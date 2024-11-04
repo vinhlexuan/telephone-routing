@@ -6,4 +6,3 @@ class Module:
     def __init__(self):
         self.repository: OperatorRepo = OperatorRepoFile()
         self.routing_service = TelephoneRouting(self.repository)
-        self.routing_service.load_operators_to_trie()
