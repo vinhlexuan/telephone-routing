@@ -73,7 +73,7 @@ Find the *price* of *input_number* for each operator, then save and update the v
 
 #### Data structure
 
-Store all operators in a ***Dict*** (or a list of operator), with key is operator name and the value is a dict of prefix and the corresponding price
+Store all operators in a ***dict*** (or a list of operator), with key is operator name and the value is a dict of prefix and the corresponding price
 
 Example:
 ```
@@ -111,8 +111,8 @@ Example:
 
 Step of this approach:
 - Load all the operator from files to a list of Operator objects
-- Sort the dict {prefix: price} in each operator. Ex: `{"467": 0.9, "46": 1.1}` --> `{"46": 1.1, "467": 0.9}`
-- Insert all elements {prefix, price} of each operator to a Trie one after another
+- Sort the dict `{prefix: price}` in each operator. Ex: `{"467": 0.9, "46": 1.1}` --> `{"46": 1.1, "467": 0.9}`
+- Insert all elements `{prefix, price}` of each operator to a Trie one after another
 - Searching prefix of the input number throughout trie
 
 #### Data structure
