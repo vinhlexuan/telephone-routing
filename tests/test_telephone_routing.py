@@ -41,6 +41,8 @@ def test_find_cheapest_operator(routing, mock_repo):
     routing.load_operators_to_trie()
     result = routing.find_cheapest_operator("4673212345")
     assert result.data["operator"] == "operator_b"
+    result = routing.find_cheapest_operator("441234")
+    assert result.data["operator"] == "operator_c" or result.data["operator"] == "operator_b"
 
 def test_find_cheapest_operator_longest_prefix_match(routing, mock_repo):
     mock_repo.get_all_operators.return_value = [
@@ -80,10 +82,10 @@ def test_find_cheapest_operator_empty_trie(routing):
 
 def test_validate_phone_number(routing):
     assert routing.validate_telephone_number("1234567890") is True
-    assert routing.validate_telephone_number("abc123") is False
 
 def test_invalid_phone_number(routing):
     result = routing.find_cheapest_operator("abc123")
+    assert routing.validate_telephone_number("abc123") is False
     assert isinstance(result, Invalid)
 
 def test_empty_phone_number(routing):

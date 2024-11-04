@@ -28,4 +28,4 @@ class TelephoneRouting:
             )
 
     def validate_telephone_number(self, telephone_number: str) -> bool:
-        return telephone_number.isdigit() and 0 < len(telephone_number) < 15
+        return telephone_number.isdigit() and 0 < len(telephone_number)
